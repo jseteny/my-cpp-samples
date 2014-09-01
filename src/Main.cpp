@@ -45,15 +45,15 @@ template<typename _CharT, typename _Traits>
     inline basic_ostream<_CharT, _Traits>&
     operator<<(basic_ostream<_CharT, _Traits>& __out, const ToString* __s) {
 
-      if (!__s){
-	      __out.setstate(ios_base::badbit);
+    if (!__s){
+      __out.setstate(ios_base::badbit);
 
-	    } else {
+    } else {
 
-	      const _CharT* str = __s -> toString().c_str();
-	      __ostream_insert(__out, str, static_cast<streamsize>(_Traits::length(str)));
-	    }
-      return __out;
+      const _CharT* str = __s -> toString().c_str();
+      __ostream_insert(__out, str, static_cast<streamsize>(_Traits::length(str)));
+    }
+    return __out;
 }
 
 
