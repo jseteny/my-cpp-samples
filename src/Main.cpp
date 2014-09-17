@@ -64,5 +64,6 @@ int main() {
 
   auto_ptr<Appointment> meeting( meet("Jack") );
   cout << meeting.get() << endl;
+
   return 0;
 }
