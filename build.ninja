@@ -1,0 +1,11 @@
+cflags = -Wall
+ldflags =
+
+rule cc
+  command = g++ $cflags -c $in -o $out
+
+rule cl
+  command = g++ $ldflags  $in -o $out
+
+build out/Main.o: cc src/Main.cpp
+build out/Main: cl out/Main.o
